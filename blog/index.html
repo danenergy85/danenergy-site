@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — DanEnergy</title>
+<meta name="description" content="Notes on energy economics, cost engineering, photovoltaics and industrial optimization.">
+<link rel="icon" type="image/png" href="../assets/images/danenergy_logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .blog-hero { padding-top: calc(var(--header-h) + 4rem); padding-bottom: 2.5rem; }
+  .blog-hero h1 { margin-bottom: 0.5rem; }
+  .post-list { margin-top: 2.5rem; display: grid; gap: 1rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/images/danenergy_brand_horizontal.png" alt="DanEnergy">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">DARK</button>
+      <a class="lang-toggle" href="../de/index.html">DE</a>
+      <a class="btn btn-primary" href="../index.html#contact">Get in touch</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <span class="section-eyebrow">Blog</span>
+    <h1>Notes on energy, engineering &amp; cost.</h1>
+    <p class="section-lead">
+      Short-form writing on rational energy use, cost engineering, photovoltaics
+      and the connection between physical reality and economic decisions.
+    </p>
+
+    <div class="blog-grid post-list">
+      <a href="why-energy-is-cost.html" class="blog-card">
+        <div class="blog-meta">
+          <span>Energy economics</span><span class="dot">•</span><span>5 min read</span><span class="dot">•</span><span>2026-05-08</span>
+        </div>
+        <h3>Why energy is the real currency of cost engineering</h3>
+        <p>Behind every supply chain there is an energy bill. Why pricing models that ignore it miss the point — and how to bring energy back into the calculation.</p>
+        <span class="arrow">Read more →</span>
+      </a>
+
+      <!-- More posts will appear here. Use why-energy-is-cost.html as a template. -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DanEnergy · Danilo Skoric, MSc EE</span>
+      <span>Energy. Engineered. Optimized.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

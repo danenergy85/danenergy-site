@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why energy is the real currency of cost engineering — DanEnergy</title>
+<meta name="description" content="Behind every supply chain there is an energy bill. A short essay on why pricing models that ignore energy miss the point.">
+<link rel="icon" type="image/png" href="../assets/images/danenergy_logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .post-wrap { padding-top: calc(var(--header-h) + 3rem); padding-bottom: 4rem; }
+  .post-meta { display: flex; gap: 0.6rem; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 1rem; }
+  .post-meta .dot { color: var(--color-accent); }
+  .post-title { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0.4rem 0 1rem; }
+  .post-content { max-width: 760px; }
+  .post-content p { font-size: 1.05rem; color: var(--color-text-soft); margin-bottom: 1.2em; }
+  .post-content h2 { font-size: 1.5rem; margin: 2.2rem 0 0.8rem; }
+  .post-content blockquote { border-left: 3px solid var(--color-accent); padding: 0.4rem 1.2rem; margin: 1.5rem 0; color: var(--color-text); font-family: var(--font-display); font-size: 1.15rem; }
+  .post-back { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 2.5rem; color: var(--color-accent); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/images/danenergy_brand_horizontal.png" alt="DanEnergy">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">DARK</button>
+      <a class="lang-toggle" href="../de/index.html">DE</a>
+      <a class="btn btn-primary" href="../index.html#contact">Get in touch</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<article class="post-wrap">
+  <div class="container post-content">
+    <div class="post-meta">
+      <span>Energy economics</span><span class="dot">•</span><span>5 min read</span><span class="dot">•</span><span>2026-05-08</span>
+    </div>
+    <h1 class="post-title">Why energy is the real currency of cost engineering</h1>
+
+    <p>
+      Most cost models in industrial RFQs treat energy as a line item somewhere
+      near the bottom of the spreadsheet &mdash; right above "miscellaneous". That
+      placement reveals more about how we model the world than about the actual
+      structure of cost.
+    </p>
+
+    <p>
+      Behind every product, every shipment, every welded body-in-white, every
+      pressed sheet, every kilometer of cable, there is energy. Energy is the
+      one input that <em>cannot be substituted</em>. You can change suppliers,
+      you can re-shore, you can swap PLC vendors. You cannot run a factory
+      without joules.
+    </p>
+
+    <h2>The hidden energy cost of every quote</h2>
+    <p>
+      When we benchmark an RFQ for a new production line, the obvious costs
+      are equipment, software hours, commissioning. The less-obvious cost
+      &mdash; and often the deciding one over a 10-year horizon &mdash; is the
+      operating energy footprint of the line.
+    </p>
+    <p>
+      A robotic body-shop cell that draws 30 kW continuous, runs three shifts,
+      and sits in a region paying 0.20 €/kWh, costs roughly €130k/year just
+      to keep moving. Multiply by the number of cells, then by the years to
+      depreciation, and you have a number that often exceeds the original
+      capex of the cell itself.
+    </p>
+
+    <blockquote>
+      You don't optimize what you don't measure. Energy is rarely measured at the level where decisions are made.
+    </blockquote>
+
+    <h2>EROEI applies to factories too</h2>
+    <p>
+      EROEI &mdash; Energy Return on Energy Invested &mdash; is usually
+      discussed in the context of oil fields and PV farms. The same logic
+      applies inside a factory: how much energy do you have to put in to
+      produce one unit of output? And, more importantly, what's the marginal
+      energy cost of each additional unit?
+    </p>
+    <p>
+      Lines designed for peak throughput often have appalling marginal energy
+      curves. Lines designed for energy efficiency at expected load look slow
+      on paper but win on operating cost over time.
+    </p>
+
+    <h2>What this means for cost engineering</h2>
+    <p>
+      Bringing energy into the cost calculation is not a sustainability
+      gesture. It's a profitability lever. Three concrete moves:
+    </p>
+    <p>
+      First, model expected operating energy at the cell level, not the plant
+      level. Second, treat energy price scenarios the same way you treat FX
+      scenarios &mdash; with sensitivity ranges, not point estimates. Third,
+      include PV self-supply potential in the capex case for any new
+      industrial facility. Modern PV often pays back inside the depreciation
+      window of the line it powers.
+    </p>
+
+    <p>
+      Energy is not the bottom of the spreadsheet. It's the spreadsheet.
+    </p>
+
+    <a href="index.html" class="post-back">← Back to all posts</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DanEnergy · Danilo Skoric, MSc EE</span>
+      <span>Energy. Engineered. Optimized.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
