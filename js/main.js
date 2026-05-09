@@ -8,17 +8,36 @@
 
   // ---------- Mobile menu ----------
   var menuToggle = document.getElementById('menuToggle');
-  var navLinks   = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
+  var navMenu    = document.getElementById('navMenu');
+  if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', function () {
-      var open = navLinks.classList.toggle('open');
+      var open = navMenu.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    navLinks.querySelectorAll('a').forEach(function (a) {
+    // Close menu when any link is clicked
+    navMenu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
-        navLinks.classList.remove('open');
+        navMenu.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
+    });
+    // Close menu on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+    // Close menu when window is resized to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900 && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
     });
   }
 
@@ -56,7 +75,7 @@
 
   // ---------- Active nav link on scroll ----------
   var sections = document.querySelectorAll('section[id]');
-  var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  var navAnchors = document.querySelectorAll('.nav-menu .nav-links a[href^="#"]');
   if (sections.length && 'IntersectionObserver' in window) {
     var navMap = {};
     navAnchors.forEach(function (a) {
