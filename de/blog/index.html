@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — DanEnergy</title>
+<meta name="description" content="Notizen zu Energieökonomie, Cost Engineering, Photovoltaik und industrieller Optimierung.">
+<link rel="icon" type="image/png" href="../../assets/images/danenergy_logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/styles.css">
+<style>
+  .blog-hero { padding-top: calc(var(--header-h) + 4rem); padding-bottom: 2.5rem; }
+  .blog-hero h1 { margin-bottom: 0.5rem; }
+  .post-list { margin-top: 2.5rem; display: grid; gap: 1rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../../assets/images/danenergy_brand_horizontal.png" alt="DanEnergy">
+    </a>
+    <nav class="nav-menu" id="navMenu" aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Über mich</a></li>
+        <li><a href="../index.html#services">Leistungen</a></li>
+        <li><a href="../index.html#projects">Projekte</a></li>
+        <li><a href="index.html" class="active">Blog</a></li>
+        <li><a href="../index.html#contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">DARK</button>
+        <a class="lang-toggle" href="../../blog/index.html">EN</a>
+        <a class="btn btn-primary" href="../index.html#contact">Kontakt aufnehmen</a>
+      </div>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <span class="section-eyebrow">Blog</span>
+    <h1>Notizen zu Energie, Engineering &amp; Kosten.</h1>
+    <p class="section-lead">
+      Kurze Beiträge über rationalen Energieeinsatz, Cost Engineering, Photovoltaik und
+      die Verbindung zwischen physikalischer Realität und ökonomischen Entscheidungen.
+    </p>
+
+    <div class="blog-grid post-list">
+      <a href="kleine-momente-grosse-erkenntnisse.html" class="blog-card">
+        <div class="blog-meta">
+          <span>Reflexionen</span><span class="dot">•</span><span>5 Min Lesezeit</span><span class="dot">•</span><span>2026-05-20</span>
+        </div>
+        <h3>Manchmal entstehen die größten geschäftlichen Erkenntnisse in den kleinsten Alltagssituationen.</h3>
+        <p>Eine Reflexion über Gleichgewicht, Bewegung und Momentum — vom Fahrradfahren mit meinem Sohn bis zum Aufbau einer Ingenieursberatung mit KI-Werkzeugen.</p>
+        <span class="arrow">Mehr lesen →</span>
+      </a>
+
+      <!-- Weitere Beiträge folgen hier. _template.html als Vorlage kopieren. -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DanEnergy · Danilo Skoric, MSc EE</span>
+      <span>Energie. Engineered. Optimiert.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
